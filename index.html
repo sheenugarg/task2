@@ -1,0 +1,164 @@
+<html>
+  <head>
+    <script src="Libraries/angular.min.js"></script>
+    <script src="Libraries/angular-ui-router.js"></script>
+    <link rel="stylesheet" type="text/css" href="libraries/bootstrap.css">
+    <link href="Libraries/angular-datepicker.css" rel="stylesheet" type="text/css" />
+    <script src="bootstrap.js"></script>
+    <script src="module.js"></script>
+    <script src="route.js"></script>
+    <script src="config.js"></script>
+    <script src="indexcontroller.js"></script>
+    <script src="Pages/Login/loginController.js"></script>
+    <script src="Pages/Login/loginService.js"></script>
+    <script src="Pages/register/registerController.js"></script>
+    <script src="Pages/register/registerService.js"></script>
+    <script src="loginTokenService.js"></script>
+    <script src="Pages/AddTask/addTaskController.js"></script>
+    <script src="Pages/AddTask/addTaskService.js"></script>
+    <script src="Pages/ViewTask/ViewTaskController.js"></script>
+    <script src="Pages/ViewTask/ViewTaskService.js"></script>
+    <script src="EditDetailsService.js"></script>
+    <script src="Pages/EditTask/EditTaskController.js"></script>
+    <script src="Pages/EditTask/EditTaskService.js"></script>
+    <script src="CustomDirectives/DeleteConfirmationDirective.js"></script>
+    <style>
+    .active { font-weight: bolder;}
+    *
+    {
+      margin:0;
+      padding: 0;
+    }
+    html,body{
+      height:100%;
+      width:100%;
+      margin:0;
+    }
+    #MainHeaderContainer
+    {
+      background-color: black;
+    }
+    #headerContainer
+    {
+        width:954px;
+        margin:0 auto;
+        padding: 0;
+        color:white;
+        font-weight: bolder;
+        font-size:20px;
+        padding: 10px;
+    }
+    .MainLoginContainer
+    {
+      width:954px;
+      margin:0 auto;
+      padding:0;
+    }
+    .AlignDivInline
+    {
+      display: inline-block;
+    }
+    .AppMessages input
+    {
+      border:2px lightgrey solid;
+      background-color: inherit;
+      font-weight: bolder;
+      font-size: 20px;
+      word-spacing: 10px;
+    }
+    .AppMessages
+    {
+      padding:10px;
+      margin:10px;
+    }
+    .LoginContainer
+    {
+      margin: 40px;
+      margin-left: 200px;
+      border:2px lightgrey solid;
+      padding: 10px;
+      background-color: lightgrey;
+    }
+    .form-group{
+	margin-bottom: 15px;
+  }
+  h1.title {
+	font-size: 50px;
+	font-family: 'Passion One', cursive;
+	font-weight: 400;
+}
+label{
+	margin-bottom: 15px;
+}
+.LoginContent
+{
+  margin-left: 40px;
+}
+.app_btn
+{
+  background-color: black;
+  color:white;
+  padding: 10px;
+  border:none;
+  border-radius: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+a:hover
+{
+  text-decoration: underline;
+}
+#AppMenu
+{
+  background-color: grey;
+}
+#AppContent
+{
+  margin:10px;
+  margin-left: 30px;
+  background-color: lightgrey;
+}
+#CreateTaskContent
+{
+  margin: 10px;
+  padding:3px;
+}
+.input-group datepicker
+{
+  height: 50px;
+  width:50px;
+}
+img
+{
+  height:20px;
+}
+table{
+  border-spacing:10px;
+}
+.complete
+{
+  color:grey;
+}
+.overdue
+{
+  color:red;
+}
+.normal
+{
+  color:black;
+}
+#EditContainer
+{
+  margin:10px;
+  padding:10px;
+}
+    </style>
+  </head>
+  <body ng-app="TaskSystem" ng-controller="indexctrl">
+    <script src="Libraries/angular-datepicker.js"></script>
+    <div>
+      <div ui-view="header"></div>
+      <div ui-view="body"></div>
+    </div>
+  </body>
+</html>

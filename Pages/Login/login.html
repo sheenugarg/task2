@@ -1,0 +1,44 @@
+<div class="MainLoginContainer" ng-controller="loginctrl">
+  <div class="LoginContainer">
+    <div class="LoginContent">
+      <div class="panel-heading">
+               <div class="panel-title text-center">
+                  <h1 class="title">Login</h1>
+                </div>
+      </div>
+      <div class="panel-heading AppMessages" ng-show="Login_Messages">
+              <input type="text" ng-model="LoginMessages">
+      </div>
+      <div>
+          <div class="form-group">
+            <label for="login_email" class="cols-sm-2">Your Email</label>
+            <div class="cols-sm-7">
+              <div class="input-group">
+              <input type="email" class="form-control"  id="login_email"  placeholder="Enter your Email" ng-model="login_email" ng-focus="ValidateLoginEmail=false"/>
+              </div>
+            </div>
+            <div class="cols-sm-3" ng-show="ValidateLoginEmail">
+              Please Provide Valid Email
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="login_password" class="cols-sm-2">Your Password</label>
+            <div class="cols-sm-7">
+              <div class="input-group">
+              <input type="password" class="form-control" id="login_password"  placeholder="Enter your Password" ng-focus="ValidateLoginPassword=false" ng-model="login_password"/>
+              </div>
+            </div>
+            <div class="cols-sm-3" ng-show="ValidateLoginPassword">
+              Please Provide Valid Password
+            </div>
+          </div>
+          <div class="form-group ">
+            <button type="button" class="btn btn-primary app_btn" ng-click="login()">Login</button>
+          </div>
+          <div>
+             <a ui-sref="mainpage_register" ui-sref-active="active">Register</a>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>

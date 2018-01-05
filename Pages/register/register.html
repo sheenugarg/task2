@@ -1,0 +1,55 @@
+<div class="MainLoginContainer" ng-controller="registerCtrl">
+  <div class="LoginContainer">
+    <div class="LoginContent">
+      <div class="panel-heading">
+               <div class="panel-title text-center">
+                  <h1 class="title">Register</h1>
+                </div>
+      </div>
+      <div class="panel-heading AppMessages" ng-show="Register_Messages">
+              <input type="text" ng-model="RegisterMessages">
+      </div>
+      <div>
+          <div class="form-group">
+            <label for="user_email" class="cols-sm-2">Your Email</label>
+            <div class="cols-sm-7">
+              <div class="input-group">
+              <input type="email" class="form-control"  id="user_email"  placeholder="Enter your Email" ng-model="user_email" ng-focus="ValidateEmail=false"/>
+              </div>
+            </div>
+            <div class="cols-sm-3" ng-show="ValidateEmail">
+              Please Provide Valid Email
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="user_password" class="cols-sm-2">Your Password</label>
+            <div class="cols-sm-7">
+              <div class="input-group">
+              <input type="password" class="form-control" id="user_password"  placeholder="Enter your Password" ng-focus="ValidatePassword=false" ng-model="user_password"/>
+              </div>
+            </div>
+            <div class="cols-sm-3" ng-show="ValidatePassword">
+              Please Provide Valid Password
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="user_confirm_password" class="cols-sm-2">Confirm Password</label>
+            <div class="cols-sm-7">
+              <div class="input-group">
+              <input type="password" class="form-control" id="user_confirm_password"  placeholder="Confirm Password" ng-focus="ValidateConfirmPassword=false" ng-model="user_confirm_password"/>
+              </div>
+            </div>
+            <div class="cols-sm-3" ng-show="ValidateConfirmPassword">
+              Please Confirm Your Password
+            </div>
+          </div>
+          <div class="form-group ">
+            <button type="button" class="btn btn-primary app_btn" ng-click="signup()">Register</button>
+          </div>
+          <div>
+             <a ui-sref="mainpage_login" ui-sref-active="active">Login</a>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
